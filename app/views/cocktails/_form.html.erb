@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <div class="form-page">
+          <%= f.button :submit, class: 'btn redirect' %>
+          <%= link_to "Home", root_path, class: "btn redirect" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

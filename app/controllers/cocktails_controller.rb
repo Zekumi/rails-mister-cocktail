@@ -8,7 +8,9 @@ class CocktailsController < ApplicationController
   # GET /cocktails/1
   def show
     @dose = Dose.new
+    @doses = @cocktail.doses
   end
+
   # GET /cocktails/new
   def new
     @cocktail = Cocktail.new
@@ -32,7 +34,6 @@ class CocktailsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :description)
   end
-
 end

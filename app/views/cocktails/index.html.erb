@@ -1,1 +1,23 @@
-<h1>All cocktails</h1>
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://academievegetale.com/wp-content/uploads/2019/05/Smoothie-fruits-rouges_BD.jpg);">
+  <div class="container">
+    <h1>Smoozy <strong></strong> <strong></strong></h1>
+    <p>Wanna have a sip?</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-product">
+  <img src="https://cdn.shopify.com/s/files/1/1556/2685/files/beautysmothie_large.jpg?v=1494332381" />
+  <div class="card-product-infos">
+    <h2> <%= cocktail.name %></h2>
+    <p> <%= cocktail.description %> </p>
+  </div>
+</div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

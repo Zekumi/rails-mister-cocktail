@@ -10,8 +10,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body style="background-color: ##F6F6F6">
+    <div class="navbar-lewagon">
+      <p>Smoozy</p>
+        <%= link_to "Add pureness", new_cocktail_path, class: "btn redirect" %>
+    </div>
 
-  <body>
     <%= yield %>
   </body>
 </html>
